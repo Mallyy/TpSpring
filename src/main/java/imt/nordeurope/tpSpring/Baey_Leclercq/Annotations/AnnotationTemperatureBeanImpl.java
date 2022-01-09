@@ -1,9 +1,19 @@
-package imt.nordeurope.tpSpring.Baey_Leclercq;
+package imt.nordeurope.tpSpring.Baey_Leclercq.Annotations;
 
-import static java.lang.System.out;
+import imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureBean;
+import imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureServiceBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-public class TemperatureBeanImpl implements TemperatureBean{
+@Component
+@Primary
+@Scope(value = "prototype")
+public class AnnotationTemperatureBeanImpl implements TemperatureBean {
     String name;
+
+    @Autowired
     TemperatureServiceBean temperatureServiceBean;
 
     public TemperatureServiceBean getTemperatureServiceBean() {

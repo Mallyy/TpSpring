@@ -1,8 +1,12 @@
 package imt.nordeurope.tpSpring.Baey_Leclercq;
 
-public class TemperatureBean implements TemperatureBean  {
-    TemperatureServiceBean temperatureServiceBean = new TemperatureServiceBean();
-    public String getName(){
-        this.name
-    }
+public interface TemperatureBean {
+    String getName();
+    void setName(String name);
+    void printTemperature();
+    void setTemperatureServiceBean(TemperatureServiceBean temperatureServiceBean);
+    int getHash ();
+    int getServiceHash ();
+    TemperatureServiceBean getTemperatureServiceBean();
+
 }

@@ -1,13 +1,25 @@
-package imt.nordeurope.tpSpring.Baey_Leclercq;
+package imt.nordeurope.tpSpring.Baey_Leclercq.Annotations;
+
+import imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import static java.lang.System.out;
+import javax.inject.Qualifier;
 
+@Component
+public class AnnotationTemperatureMain {
 
-public class TemperatureMain {
+    //@Qualifier("annotationTemperatureBeanImpl")
+    @Autowired
     private TemperatureBean deBean;
+
+   // @Qualifier("annotationTemperatureBeanImpl")
+    @Autowired
     private TemperatureBean enBean;
+
+    //@Qualifier("annotationTemperatureBeanImpl")
+    @Autowired
     private TemperatureBean frBean;
 
     public TemperatureBean getDeBean() {

@@ -12,7 +12,25 @@
     <context:annotation-config/>
     <context:component-scan base-package="imt.nordeurope.tpSpring.Baey_Leclercq"></context:component-scan>
 
-<!--    <bean id="simpleBean" class="imt.nordeurope.tpSpring.Baey_Leclercq.SimpleBean"/>-->
+    <bean id="temperatureBeanFR" class="imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureBeanImpl" scope="prototype">
+        <property name="temperatureServiceBean" ref="temperatureServiceBean" ></property>
+    </bean>
+    <bean id="temperatureBeanEN" class="imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureBeanImpl" scope="prototype">
+        <property name="temperatureServiceBean" ref="temperatureServiceBean"/>
+
+    </bean>
+    <bean id="temperatureBeanDE" class="imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureBeanImpl" scope="prototype">
+        <property name="temperatureServiceBean" ref="temperatureServiceBean"/>
+    </bean>
+    <bean id="temperatureServiceBean" class="imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureServiceBeanImpl" scope="singleton"/>
+    <bean id="temperatureMain" class="imt.nordeurope.tpSpring.Baey_Leclercq.TemperatureMain" scope="prototype">
+        <property name="frBean" ref="temperatureBeanFR" ></property>
+        <property name="enBean" ref="temperatureBeanEN" ></property>
+        <property name="deBean" ref="temperatureBeanDE" ></property>
+
+    </bean>
+
+    <!--    <bean id="simpleBean" class="imt.nordeurope.tpSpring.Baey_Leclercq.SimpleBean"/>-->
 <!--    <bean id="monBean" class="imt.nordeurope.tpSpring.Baey_Leclercq.SimpleBeanInjection">-->
 <!--        <property name="simpleBean" ref="simpleBean" ></property>-->
 <!--    </bean>-->
