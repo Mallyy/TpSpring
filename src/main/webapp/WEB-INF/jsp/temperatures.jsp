@@ -5,8 +5,8 @@
 </head>
 <body>
 <h1>Les températures</h1>
-<p>Température en France :${temperatureFR}</p>
-<p>Hashcode:${hashCodeFR} </p>
+<%--<p>Température en France :${temperatureFR}</p>--%>
+<%--<p>Hashcode:${hashCodeFR} </p>--%>
 <br>
 <%--<p>Température en Allemagne :${temperatureDE}</p>--%>
 <%--<p>Hashcode:${hashCodeDE} </p>--%>

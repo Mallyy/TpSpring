@@ -6,9 +6,9 @@ import static java.lang.System.out;
 
 
 public class TemperatureMain {
-    private TemperatureBean deBean;
-    private TemperatureBean enBean;
-    private TemperatureBean frBean;
+    public TemperatureBean deBean;
+    public TemperatureBean enBean;
+    public TemperatureBean frBean;
 
     public TemperatureBean getDeBean() {
         return deBean;

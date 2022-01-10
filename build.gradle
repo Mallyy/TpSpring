@@ -13,9 +13,7 @@ sourceCompatibility = '11'
 repositories {
     mavenCentral()
 }
-springBoot {
-    mainClass = "imt.nordeurope.tpSpring.Baey_Leclercq.Controller.TempController"
-}
+
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'

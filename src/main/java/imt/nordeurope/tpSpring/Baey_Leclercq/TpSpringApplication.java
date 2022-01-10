@@ -1,4 +1,4 @@
-package com.example.tpspring;
+package imt.nordeurope.tpSpring.Baey_Leclercq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
